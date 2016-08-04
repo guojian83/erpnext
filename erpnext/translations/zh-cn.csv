@@ -2360,7 +2360,7 @@ apps/erpnext/erpnext/public/js/controllers/transaction.js +850,Show tax break-up
 apps/erpnext/erpnext/accounts/party.py +308,Due / Reference Date cannot be after {0},到期/参照日期不能迟于{0}
 apps/erpnext/erpnext/config/setup.py +51,Data Import and Export,数据导入和导出
 apps/erpnext/erpnext/accounts/report/payment_period_based_on_invoice_date/payment_period_based_on_invoice_date.py +55,Invoice Posting Date,发票发布日期
-DocType: Sales Invoice,Rounded Total,总圆角
+DocType: Sales Invoice,Rounded Total,合计
 DocType: Product Bundle,List items that form the package.,打包的品目列表。
 apps/erpnext/erpnext/accounts/doctype/monthly_distribution/monthly_distribution.py +26,Percentage Allocation should be equal to 100%,百分比分配应该等于100 ％
 DocType: Serial No,Out of AMC,出资产管理公司
@@ -3455,3 +3455,11 @@ apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.py +169,Row {0
 apps/erpnext/erpnext/accounts/doctype/account/account.py +218,Account {0} does not exist,科目{0}不存在
 DocType: Account,Cash,现金
 DocType: Employee,Short biography for website and other publications.,在网站或其他出版物使用的个人简介。
+DocType: Customer,Active,已激活
+DocType: Quotation Item,Amount,小计
+DocType: Sales Taxes and Charges,Total,总计
+apps/erpnext/erpnext/selling/doctype/customer/customer_dashboard.py +5,This is based on transactions against this Customer. See timeline below for details,这是基于该客户交易信息的。需要详细信息请查看下面的时间轴。
+apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +5,This is based on stock movement. See {0} for details,这是基于仓库流转的。需要详细信息请查看{0}。
+apps/erpnext/erpnext/hr/doctype/employee/employee_dashboard.py +5,This is based on the attendance of this Employee,这是基于该员工的出勤信息的。
+apps/erpnext/erpnext/buying/doctype/supplier/supplier_dashboard.py +5,This is based on transactions against this Supplier. See timeline below for details,这是基于该供应商的交易信息的。需要详细信息请查看下面的时间轴。
+apps/erpnext/erpnext/projects/doctype/project/project_dashboard.py +5,This is based on the Time Sheets created against this project,这是基于该项目的工作时间记录表的。
