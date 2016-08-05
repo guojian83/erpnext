@@ -95,7 +95,7 @@ apps/erpnext/erpnext/setup/setup_wizard/industry_type.py +6,Advertising,广告
 apps/erpnext/erpnext/accounts/doctype/mode_of_payment/mode_of_payment.py +22,Same Company is entered more than once,同一家公司进入不止一次
 DocType: Employee,Married,已婚
 apps/erpnext/erpnext/accounts/party.py +38,Not permitted for {0},不允许{0}
-apps/erpnext/erpnext/accounts/doctype/purchase_invoice/purchase_invoice.js +536,Get items from,从获得项目
+apps/erpnext/erpnext/accounts/doctype/purchase_invoice/purchase_invoice.js +536,Get items from,提取信息
 apps/erpnext/erpnext/accounts/doctype/sales_invoice/sales_invoice.py +377,Stock cannot be updated against Delivery Note {0},送货单{0}不能更新库存
 DocType: Payment Reconciliation,Reconcile,对账
 apps/erpnext/erpnext/setup/setup_wizard/industry_type.py +30,Grocery,杂货
@@ -1530,7 +1530,7 @@ apps/erpnext/erpnext/stock/doctype/serial_no/serial_no.py +223,Serial No {0} doe
 apps/erpnext/erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.py +157,Row # ,行＃
 DocType: Purchase Invoice,In Words (Company Currency),大写金额（公司货币）
 DocType: Asset,Supplier,供应商
-apps/erpnext/erpnext/public/js/utils.js +156,Get From,得到
+apps/erpnext/erpnext/public/js/utils.js +156,Get From ,提取
 DocType: C-Form,Quarter,季
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +104,Miscellaneous Expenses,杂项开支
 DocType: Global Defaults,Default Company,默认公司
@@ -2532,7 +2532,7 @@ apps/erpnext/erpnext/accounts/doctype/sales_invoice/sales_invoice.py +396,Please
 DocType: Leave Control Panel,Please select Carry Forward if you also want to include previous fiscal year's balance leaves to this fiscal year,请选择结转，如果你还需要包括上一会计年度的资产负债叶本财年
 DocType: GL Entry,Against Voucher Type,对凭证类型
 DocType: Item,Attributes,属性
-apps/erpnext/erpnext/accounts/doctype/purchase_invoice/purchase_invoice.js +591,Get Items,获取品目
+apps/erpnext/erpnext/accounts/doctype/purchase_invoice/purchase_invoice.js +591,Get Items,提取
 apps/erpnext/erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py +210,Please enter Write Off Account,请输入核销帐户
 apps/erpnext/erpnext/selling/report/inactive_customers/inactive_customers.py +71,Last Order Date,最后订购日期
 apps/erpnext/erpnext/accounts/doctype/budget/budget.py +41,Account {0} does not belongs to company {1},帐户{0}不属于公司{1}
@@ -2766,7 +2766,7 @@ DocType: Item,Taxes,税
 apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py +301,Paid and Not Delivered,支付和未送达
 DocType: Project,Default Cost Center,默认成本中心
 DocType: Purchase Invoice,End Date,结束日期
-apps/erpnext/erpnext/config/stock.py +7,Stock Transactions,证券交易
+apps/erpnext/erpnext/config/stock.py +7,Stock Transactions,出入库
 DocType: Employee,Internal Work History,内部工作经历
 apps/erpnext/erpnext/setup/setup_wizard/industry_type.py +42,Private Equity,私募股权投资
 DocType: Maintenance Visit,Customer Feedback,客户反馈
@@ -3417,7 +3417,7 @@ apps/erpnext/erpnext/public/js/setup_wizard.js +172,Attach Logo,附加标志
 DocType: Customer,Commission Rate,佣金率
 apps/erpnext/erpnext/stock/doctype/item/item.js +253,Make Variant,在Variant
 apps/erpnext/erpnext/config/hr.py +87,Block leave applications by department.,按部门禁止假期申请。
-apps/erpnext/erpnext/config/selling.py +169,Analytics,Analytics（分析）
+apps/erpnext/erpnext/config/selling.py +169,Analytics,分析
 apps/erpnext/erpnext/templates/includes/cart/cart_dropdown.html +21,Cart is Empty,车是空的
 DocType: Production Order,Actual Operating Cost,实际运行成本
 apps/erpnext/erpnext/accounts/doctype/account/account.py +84,Root cannot be edited.,根不能被编辑。
