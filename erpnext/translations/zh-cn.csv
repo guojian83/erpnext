@@ -346,7 +346,7 @@ apps/erpnext/erpnext/accounts/doctype/cost_center/cost_center.js +41,Please ente
 DocType: BOM,Item Desription,品目说明
 DocType: Purchase Invoice,Supplier Name,供应商名称
 apps/erpnext/erpnext/setup/page/welcome_to_erpnext/welcome_to_erpnext.html +25,Read the ERPNext Manual,阅读ERPNext手册
-DocType: Account,Is Group,是集团
+DocType: Account,Is Group,是群组
 DocType: Stock Settings,Automatically Set Serial Nos based on FIFO,自动设置序列号的基础上FIFO
 DocType: Accounts Settings,Check Supplier Invoice Number Uniqueness,检查供应商发票编号唯一性
 apps/erpnext/erpnext/stock/doctype/packing_slip/packing_slip.js +57,'To Case No.' cannot be less than 'From Case No.','起始箱号'不能小于'结束箱号'
@@ -3261,7 +3261,7 @@ apps/erpnext/erpnext/accounts/doctype/account/account.py +127,Currency can not b
 DocType: Company,Round Off Account,四舍五入账户
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +91,Administrative Expenses,行政开支
 apps/erpnext/erpnext/setup/setup_wizard/industry_type.py +18,Consulting,咨询
-DocType: Customer Group,Parent Customer Group,母公司集团客户
+DocType: Customer Group,Parent Customer Group,上一级客户群组
 DocType: Purchase Invoice,Contact Email,联络人电邮
 DocType: Appraisal Goal,Score Earned,已得分数
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +182,Notice Period,通知期
@@ -3463,3 +3463,4 @@ apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +5,This is based on st
 apps/erpnext/erpnext/hr/doctype/employee/employee_dashboard.py +5,This is based on the attendance of this Employee,这是基于该员工的出勤信息的。
 apps/erpnext/erpnext/buying/doctype/supplier/supplier_dashboard.py +5,This is based on transactions against this Supplier. See timeline below for details,这是基于该供应商的交易信息的。需要详细信息请查看下面的时间轴。
 apps/erpnext/erpnext/projects/doctype/project/project_dashboard.py +5,This is based on the Time Sheets created against this project,这是基于该项目的工作时间记录表的。
+DocType: Supplier,Name and Type,名称和类型
