@@ -474,7 +474,7 @@ DocType: Sales Invoice,Sales Taxes and Charges,销售税费
 DocType: Employee,Organization Profile,组织简介
 DocType: Employee,Reason for Resignation,原因辞职
 apps/erpnext/erpnext/config/hr.py +147,Template for performance appraisals.,绩效考核模板。
-DocType: Payment Reconciliation,Invoice/Journal Entry Details,发票/日记帐分录详细信息
+DocType: Payment Reconciliation,Invoice/Journal Entry Details,发票/流水记录详细信息
 apps/erpnext/erpnext/accounts/utils.py +53,{0} '{1}' not in Fiscal Year {2},{0}“ {1}”不属于{2}财年
 DocType: Buying Settings,Settings for Buying Module,采购模块的设置
 apps/erpnext/erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.js +69,Please enter Purchase Receipt first,请第一次进入购买收据
@@ -879,7 +879,7 @@ apps/erpnext/erpnext/accounts/doctype/gl_entry/gl_entry.py +52,Either debit or c
 DocType: Item Attribute Value,"This will be appended to the Item Code of the variant. For example, if your abbreviation is ""SM"", and the item code is ""T-SHIRT"", the item code of the variant will be ""T-SHIRT-SM""",这将追加到变异的项目代码。例如，如果你的英文缩写为“SM”，而该项目的代码是“T-SHIRT”，该变种的项目代码将是“T-SHIRT-SM”
 DocType: Salary Slip,Net Pay (in words) will be visible once you save the Salary Slip.,保存工资单后会显示净支付金额(大写)。
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +163,Blue,蓝色
-DocType: Purchase Invoice,Is Return,再来
+DocType: Purchase Invoice,Is Return,是退货
 DocType: Price List Country,Price List Country,价目表国家
 apps/erpnext/erpnext/utilities/doctype/contact/contact.py +69,Please set Email ID,请设置电子邮件ID
 DocType: Item,UOMs,计量单位
@@ -974,7 +974,7 @@ apps/erpnext/erpnext/setup/doctype/item_group/item_group.js +31,This is a root i
 DocType: Journal Entry Account,Purchase Order,采购订单
 DocType: Warehouse,Warehouse Contact Info,仓库联系方式
 DocType: Purchase Invoice,Recurring Type,经常性类型
-DocType: Address,City/Town,市/镇
+DocType: Address,City/Town,区/镇
 DocType: Address,Is Your Company Address,是你的公司地址
 DocType: Email Digest,Annual Income,年收入
 DocType: Serial No,Serial No Details,序列号详情
@@ -999,7 +999,7 @@ apps/erpnext/erpnext/accounts/doctype/cost_center/cost_center.js +27,Note: This 
 DocType: Item,Website Item Groups,网站物件组
 DocType: Purchase Invoice,Total (Company Currency),总（公司货币）
 apps/erpnext/erpnext/stock/utils.py +176,Serial number {0} entered more than once,序列号{0}已多次输入
-DocType: Depreciation Schedule,Journal Entry,日记帐分录
+DocType: Depreciation Schedule,Journal Entry,流水记录
 DocType: Workstation,Workstation Name,工作站名称
 apps/erpnext/erpnext/setup/doctype/email_digest/email_digest.js +17,Email Digest:,邮件摘要：
 apps/erpnext/erpnext/manufacturing/doctype/bom/bom.py +445,BOM {0} does not belong to Item {1},BOM{0}不属于品目{1}
@@ -1024,7 +1024,7 @@ DocType: Purchase Invoice,Party Account Currency,党的账户币种
 ,BOM Browser,BOM浏览器
 DocType: Purchase Taxes and Charges,Add or Deduct,添加或扣除
 apps/erpnext/erpnext/accounts/doctype/shipping_rule/shipping_rule.py +81,Overlapping conditions found between:,之间存在重叠的条件：
-apps/erpnext/erpnext/accounts/doctype/gl_entry/gl_entry.py +171,Against Journal Entry {0} is already adjusted against some other voucher,日记帐分录{0}已经被其他凭证调整
+apps/erpnext/erpnext/accounts/doctype/gl_entry/gl_entry.py +171,Against Journal Entry {0} is already adjusted against some other voucher,流水记录{0}已经被其他凭证调整
 apps/erpnext/erpnext/selling/report/inactive_customers/inactive_customers.py +68,Total Order Value,总订单价值
 apps/erpnext/erpnext/demo/setup_data.py +345,Food,食品
 apps/erpnext/erpnext/accounts/report/accounts_payable/accounts_payable.js +51,Ageing Range 3,账龄范围3
@@ -1319,13 +1319,13 @@ apps/erpnext/erpnext/config/hr.py +40,Applicant for a Job.,求职申请。
 DocType: Purchase Order Item,Warehouse and Reference,仓库及参考
 DocType: Supplier,Statutory info and other general information about your Supplier,供应商的注册信息和其他一般信息
 apps/erpnext/erpnext/hooks.py +88,Addresses,地址
-apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +212,Against Journal Entry {0} does not have any unmatched {1} entry,日记帐分录{0}没有不符合的{1}分录
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +212,Against Journal Entry {0} does not have any unmatched {1} entry,流水记录{0}没有不符合的{1}分录
 apps/erpnext/erpnext/config/hr.py +137,Appraisals,估价
 apps/erpnext/erpnext/stock/doctype/serial_no/serial_no.py +201,Duplicate Serial No entered for Item {0},品目{0}的序列号重复
 DocType: Shipping Rule Condition,A condition for a Shipping Rule,发货规则的一个条件
 apps/erpnext/erpnext/stock/report/stock_balance/stock_balance.py +149,Please set filter based on Item or Warehouse,根据项目或仓库请设置过滤器
 DocType: Packing Slip,The net weight of this package. (calculated automatically as sum of net weight of items),此打包的净重。（根据内容物件的净重自动计算）
-DocType: Sales Order,To Deliver and Bill,为了提供与比尔
+DocType: Sales Order,To Deliver and Bill,待发货及收费
 DocType: GL Entry,Credit Amount in Account Currency,在账户币金额
 apps/erpnext/erpnext/manufacturing/doctype/bom/bom.py +442,BOM {0} must be submitted,BOM{0}未提交
 DocType: Authorization Control,Authorization Control,授权控制
@@ -1719,7 +1719,7 @@ apps/erpnext/erpnext/manufacturing/doctype/production_order/production_order.py 
 DocType: Shipping Rule,Shipping Rule Label,配送规则标签
 apps/erpnext/erpnext/manufacturing/doctype/bom/bom.py +217,Raw Materials cannot be blank.,原材料不能为空。
 apps/erpnext/erpnext/accounts/doctype/sales_invoice/sales_invoice.py +403,"Could not update stock, invoice contains drop shipping item.",无法更新库存，发票包含下降航运项目。
-apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.js +460,Quick Journal Entry,快速日记帐分录
+apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.js +460,Quick Journal Entry,快速流水记录
 apps/erpnext/erpnext/manufacturing/doctype/bom/bom.js +111,You can not change rate if BOM mentioned agianst any item,如果任何条目中引用了BOM，你不能更改其税率
 DocType: Employee,Previous Work Experience,以前的工作经验
 DocType: Stock Entry,For Quantity,对于数量
@@ -1810,7 +1810,7 @@ DocType: Payment Reconciliation,Bank / Cash Account,银行/现金账户
 DocType: Tax Rule,Billing City,结算城市
 DocType: Global Defaults,Hide Currency Symbol,隐藏货币符号
 apps/erpnext/erpnext/config/accounts.py +283,"e.g. Bank, Cash, Credit Card",例如：银行，现金，信用卡
-DocType: Journal Entry,Credit Note,贷项通知单
+DocType: Journal Entry,Credit Note,信用票据
 DocType: Warranty Claim,Service Address,服务地址
 apps/erpnext/erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.py +83,Max 100 rows for Stock Reconciliation.,库存盘点，最多100行。
 DocType: Material Request,Manufacture,生产
@@ -2265,7 +2265,7 @@ DocType: Item,Warranty Period (in days),保修期限（天数）
 apps/erpnext/erpnext/accounts/report/cash_flow/cash_flow.py +16,Net Cash from Operations,从运营的净现金
 apps/erpnext/erpnext/public/js/setup_wizard.js +225,e.g. VAT,例如增值税
 apps/erpnext/erpnext/stock/report/bom_search/bom_search.js +26,Item 4,项目4
-DocType: Journal Entry Account,Journal Entry Account,日记帐分录帐号
+DocType: Journal Entry Account,Journal Entry Account,流水记录账户
 DocType: Shopping Cart Settings,Quotation Series,报价系列
 apps/erpnext/erpnext/setup/doctype/item_group/item_group.py +59,"An item exists with same name ({0}), please change the item group name or rename the item",具有名称 {0} 的品目已存在，请更名
 DocType: Sales Order Item,Sales Order Date,销售订单日期
@@ -2314,7 +2314,7 @@ DocType: POS Profile,Update Stock,更新库存
 apps/erpnext/erpnext/stock/doctype/packing_slip/packing_slip.js +100,Different UOM for items will lead to incorrect (Total) Net Weight value. Make sure that Net Weight of each item is in the same UOM.,不同计量单位的项目会导致不正确的（总）净重值。请确保每个品目的净重使用同一个计量单位。
 apps/erpnext/erpnext/stock/report/item_prices/item_prices.py +39,BOM Rate,BOM税率
 apps/erpnext/erpnext/selling/doctype/installation_note/installation_note.py +83,Please pull items from Delivery Note,请发货单拉项目
-apps/erpnext/erpnext/accounts/utils.py +349,Journal Entries {0} are un-linked,日记帐分录{0}没有关联
+apps/erpnext/erpnext/accounts/utils.py +349,Journal Entries {0} are un-linked,流水记录{0}没有关联
 apps/erpnext/erpnext/config/crm.py +74,"Record of all communications of type email, phone, chat, visit, etc.",包含电子邮件，电话，聊天，访问等所有通信记录
 DocType: Manufacturer,Manufacturers used in Items,在项目中使用制造商
 apps/erpnext/erpnext/accounts/general_ledger.py +140,Please mention Round Off Cost Center in Company,请提及公司舍入成本中心
@@ -2747,7 +2747,7 @@ apps/erpnext/erpnext/config/learn.py +239,Human Resource,人力资源
 DocType: Payment Reconciliation Payment,Payment Reconciliation Payment,付款方式付款对账
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +36,Tax Assets,所得税资产
 DocType: BOM Item,BOM No,BOM编号
-apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.py +133,Journal Entry {0} does not have account {1} or already matched against other voucher,日记帐分录{0}没有科目{1}或已经匹配其他凭证
+apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.py +133,Journal Entry {0} does not have account {1} or already matched against other voucher,流水记录{0}没有科目{1}或已经匹配其他凭证
 DocType: Item,Moving Average,移动平均
 DocType: BOM Replace Tool,The BOM which will be replaced,此物料清单将被替换
 DocType: Account,Debit,借方
@@ -2803,7 +2803,7 @@ DocType: GL Entry,Party,一方
 DocType: Sales Order,Delivery Date,交货日期
 DocType: Opportunity,Opportunity Date,日期机会
 DocType: Purchase Receipt,Return Against Purchase Receipt,回到对外购入库单
-DocType: Purchase Order,To Bill,比尔
+DocType: Purchase Order,To Bill,待收费
 DocType: Material Request,% Ordered,％有序
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +61,Piecework,计件工作
 apps/erpnext/erpnext/accounts/report/gross_profit/gross_profit.py +68,Avg. Buying Rate,平均买入价
@@ -3428,7 +3428,7 @@ DocType: Packing Slip,Package Weight Details,包装重量详情
 DocType: Payment Gateway Account,Payment Gateway Account,支付网关账户
 DocType: Shopping Cart Settings,After payment completion redirect user to selected page.,支付完成后重定向用户选择的页面。
 apps/erpnext/erpnext/hr/doctype/upload_attendance/upload_attendance.py +102,Please select a csv file,请选择一个csv文件
-DocType: Purchase Order,To Receive and Bill,接收和比尔
+DocType: Purchase Order,To Receive and Bill,待收货及付款
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +94,Designer,设计师
 apps/erpnext/erpnext/config/selling.py +153,Terms and Conditions Template,条款和条件模板
 DocType: Serial No,Delivery Details,交货细节
@@ -3473,3 +3473,6 @@ DocType: Homepage,Homepage,主页
 ,Minutes to First Response for Opportunity,首次回应机会时长（分钟）
 apps/erpnext/erpnext/config/selling.py +272,SMS,短信
 DocType: Payment Entry,Payment Entry,付款记录
+DocType: Address,County,市/县
+DocType: Address,State,省
+DocType: Address,Email Id,电子邮箱
