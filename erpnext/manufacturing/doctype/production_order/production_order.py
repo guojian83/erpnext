@@ -105,7 +105,7 @@ class ProductionOrder(Document):
 
 	def stop_unstop(self, status):
 		""" Called from client side on Stop/Unstop event"""
-		self.update_status(status)
+		status = self.update_status(status)
 		self.update_planned_qty()
 		frappe.msgprint(_("Production Order status is {0}").format(status))
 		self.notify_update()
@@ -114,12 +114,14 @@ class ProductionOrder(Document):
 	def update_status(self, status=None):
 		'''Update status of production order if unknown'''
 		if not status:
-			status = self.get_status()
+			status = self.get_status(status)
 			
 		if status != self.status:
 			self.db_set("status", status)
 
 		self.update_required_items()
+
+		return status
 
 	def get_status(self, status=None):
 		'''Return the status based on stock entries against this production order'''
@@ -540,7 +542,7 @@ def make_new_timesheet(source_name, target_doc=None):
 	po = frappe.get_doc('Production Order', source_name)
 	ts = po.make_time_logs(open_new=True)
 
-	if not ts.get('time_logs'):
+	if not ts or not ts.get('time_logs'):
 		frappe.throw(_("Already completed"))
 
 	return ts

@@ -63,6 +63,8 @@ class Opportunity(TransactionBase):
 					"email_id": self.contact_email,
 					"lead_name": sender_name
 				})
+
+				lead.flags.ignore_email_validation = True
 				lead.insert(ignore_permissions=True)
 				lead_name = lead.name
 

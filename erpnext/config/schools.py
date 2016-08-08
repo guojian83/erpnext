@@ -13,6 +13,10 @@ def get_data():
 				},
 				{
 					"type": "doctype",
+					"name": "Student Log"
+				},
+				{
+					"type": "doctype",
 					"name": "Student Batch"
 				},
 				{
@@ -57,7 +61,11 @@ def get_data():
 				},
 				{
 					"type": "doctype",
-					"name": "Examination"
+					"name": "Assessment"
+				},
+				{
+					"type": "doctype",
+					"name": "Assessment Group"
 				},
 				{
 					"type": "doctype",

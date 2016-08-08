@@ -6,6 +6,7 @@ from __future__ import unicode_literals
 import frappe
 from frappe import _
 
+import json
 from datetime import timedelta
 from frappe.utils import flt, time_diff_in_hours, get_datetime, getdate, cint, get_datetime_str
 from frappe.model.document import Document
@@ -94,7 +95,7 @@ class Timesheet(Document):
 			if self.production_order and flt(data.completed_qty) == 0:
 				frappe.throw(_("Row {0}: Completed Qty must be greater than zero.").format(data.idx))
 
-			if self.production_order and flt(pending_qty) < flt(data.completed_qty):
+			if self.production_order and flt(pending_qty) < flt(data.completed_qty) and flt(pending_qty) > 0:
 				frappe.throw(_("Row {0}: Completed Qty cannot be more than {1} for operation {2}").format(data.idx, pending_qty, data.operation),
 					OverProductionLoggedError)
 
@@ -290,10 +291,31 @@ def get_activity_cost(employee=None, activity_type=None):
 			["costing_rate", "billing_rate"], as_dict=True)
 
 	return rate[0] if rate else {}
-
+		
 @frappe.whitelist()
-def get_employee_list(doctype, txt, searchfield, start, page_len, filters):
-	return frappe.db.sql("""select distinct employee, employee_name
-		from `tabSalary Structure` where salary_slip_based_on_timesheet=1
-		and employee like %(txt)s or employee_name like %(txt)s limit %(start)s, %(page_len)s""", 
-		{'txt': "%%%s%%"% txt, 'start': start, 'page_len': page_len})
+def get_events(start, end, filters=None):
+	"""Returns events for Gantt / Calendar view rendering.
+	:param start: Start date-time.
+	:param end: End date-time.
+	:param filters: Filters (JSON).
+	"""
+	filters = json.loads(filters)
+
+	conditions = get_conditions(filters)
+	return frappe.db.sql("""select `tabTimesheet Detail`.name as name, `tabTimesheet Detail`.parent as parent,
+		from_time, hours, activity_type, project, to_time from `tabTimesheet Detail`, 
+		`tabTimesheet` where `tabTimesheet Detail`.parent = `tabTimesheet`.name and 
+		(from_time between %(start)s and %(end)s) {conditions}""".format(conditions=conditions),
+		{
+			"start": start,
+			"end": end
+		}, as_dict=True, update={"allDay": 0})
+
+def get_conditions(filters):
+	conditions = []
+	abbr = {'employee': 'tabTimesheet', 'project': 'tabTimesheet Detail'}
+	for key in filters:
+		if filters.get(key):
+			conditions.append("`%s`.%s = '%s'"%(abbr.get(key), key, filters.get(key)))
+
+	return " and {}".format(" and ".join(conditions)) if conditions else ""

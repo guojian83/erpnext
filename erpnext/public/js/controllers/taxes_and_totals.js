@@ -561,28 +561,24 @@ erpnext.taxes_and_totals = erpnext.payments.extend({
 				this.calculate_paid_amount()
 			}
 
+			this.calculate_change_amount()
 			var outstanding_amount = 0.0
 
 			var paid_amount = (this.frm.doc.party_account_currency == this.frm.doc.currency) ?
 				this.frm.doc.paid_amount : this.frm.doc.base_paid_amount;
 
-			if (total_amount_to_pay > paid_amount){
-				outstanding_amount =  flt(total_amount_to_pay - flt(paid_amount),
-					precision("outstanding_amount"));
-			}
+			this.frm.doc.outstanding_amount =  flt(total_amount_to_pay - flt(paid_amount) + 
+				flt(this.frm.doc.change_amount), precision("outstanding_amount"));
 
 		} else if(this.frm.doc.doctype == "Purchase Invoice") {
-			var outstanding_amount = flt(total_amount_to_pay, precision("outstanding_amount"));
-		}
-
-		this.frm.doc.outstanding_amount = outstanding_amount;
-		this.calculate_change_amount()
+			this.frm.doc.outstanding_amount = flt(total_amount_to_pay, precision("outstanding_amount"));
+		}		
 	},
 
 	set_default_payment: function(total_amount_to_pay, update_paid_amount){
 		var me = this;
 		payment_status = true;
-		if(this.frm.doc.is_pos && (!this.frm.doc.paid_amount || update_paid_amount===undefined || update_paid_amount)){
+		if(this.frm.doc.is_pos && (update_paid_amount===undefined || update_paid_amount)){
 			$.each(this.frm.doc['payments'] || [], function(index, data){
 				if(data.type == "Cash" && payment_status) {
 					data.amount = total_amount_to_pay;
@@ -610,15 +606,13 @@ erpnext.taxes_and_totals = erpnext.payments.extend({
 	},
 
 	calculate_change_amount: function(){
-		var change_amount = 0.0;
+		this.frm.doc.change_amount = 0.0;
 		if(this.frm.doc.paid_amount > this.frm.doc.grand_total){
-			change_amount = flt(this.frm.doc.paid_amount - this.frm.doc.grand_total,
-				precision("change_amount"))
+			this.frm.doc.change_amount = flt(this.frm.doc.paid_amount - this.frm.doc.grand_total + 
+				this.frm.doc.write_off_amount, precision("change_amount"));
 		}
 
-		this.frm.doc.change_amount = flt(change_amount,
-			precision("change_amount"))
-		this.frm.doc.base_change_amount = flt(change_amount * this.frm.doc.conversion_rate,
-			precision("base_change_amount"))
+		this.frm.doc.base_change_amount = flt(this.frm.doc.change_amount * this.frm.doc.conversion_rate,
+			precision("base_change_amount"));
 	},
 })
