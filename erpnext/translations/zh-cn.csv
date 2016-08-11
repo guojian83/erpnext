@@ -3483,3 +3483,9 @@ DocType: Item,Opening Stock,初始库存
 DocType: Item,Standard Selling Rate,标准销售单价
 apps/erpnext/erpnext/selling/doctype/customer/customer_dashboard.py +9,Pre Sales,售前
 DocType: Sales Taxes and Charges,Rate,税率
+DocType: Purchase Invoice Item,Is Fixed Asset,是固定资产
+apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +33,Traceability,追踪
+apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +28,Buy,购买
+apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +20,Pricing,价格
+apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +24,Sell,销售
+apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +37,Move,移动
