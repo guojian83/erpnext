@@ -1841,7 +1841,7 @@ DocType: Payment Entry,Payment Type,针对选择您要分配款项的发票。
 DocType: Process Payroll,Select Employees,选择雇员
 DocType: Bank Reconciliation,To Date,至今
 DocType: Opportunity,Potential Sales Deal,潜在的销售交易
-DocType: Purchase Invoice,Total Taxes and Charges,总营业税金及费用
+DocType: Purchase Invoice,Total Taxes and Charges,总税金及费用
 DocType: Employee,Emergency Contact,紧急联络人
 DocType: Item,Quality Parameters,质量参数
 apps/erpnext/erpnext/accounts/doctype/account/account.js +56,Ledger,分类账
@@ -2142,7 +2142,7 @@ DocType: Journal Entry,User Remark,用户备注
 DocType: Lead,Market Segment,市场分类
 DocType: Employee Internal Work History,Employee Internal Work History,雇员内部就职经历
 apps/erpnext/erpnext/accounts/report/trial_balance/trial_balance.py +233,Closing (Dr),结算(借记)
-DocType: Contact,Passive,被动
+DocType: Contact,Passive,未联系
 apps/erpnext/erpnext/stock/doctype/serial_no/serial_no.py +228,Serial No {0} not in stock,序列号{0}无库存
 apps/erpnext/erpnext/config/selling.py +159,Tax template for selling transactions.,销售业务的税务模板。
 apps/erpnext/erpnext/accounts/page/pos/pos.js +1351,Write Off Outstanding Amount,核销未付金额
@@ -2615,7 +2615,7 @@ apps/erpnext/erpnext/config/learn.py +278,Publish Items on Website,公布于网�
 DocType: Authorization Rule,Authorization Rule,授权规则
 DocType: Sales Invoice,Terms and Conditions Details,条款和条件详情
 apps/erpnext/erpnext/templates/generators/item.html +86,Specifications,产品规格
-DocType: Sales Taxes and Charges Template,Sales Taxes and Charges Template,营业税金及费用模板
+DocType: Sales Taxes and Charges Template,Sales Taxes and Charges Template,税金及费用模板
 apps/erpnext/erpnext/setup/setup_wizard/industry_type.py +10,Apparel & Accessories,服装及配饰
 apps/erpnext/erpnext/selling/report/inactive_customers/inactive_customers.py +67,Number of Order,订购次数
 DocType: Item Group,HTML / Banner that will show on the top of product list.,HTML或横幅，将显示在产品列表的顶部。
@@ -3126,7 +3126,7 @@ DocType: Delivery Note,To Warehouse,到仓库
 apps/erpnext/erpnext/stock/doctype/item/item.py +412,'Has Serial No' can not be 'Yes' for non-stock item,非库存项目不能勾选'是否有序列号'
 apps/erpnext/erpnext/hr/doctype/attendance/attendance.py +34,Attendance can not be marked for future dates,考勤不能标记为未来的日期
 DocType: Pricing Rule,Pricing Rule Help,定价规则说明
-DocType: Purchase Taxes and Charges,Account Head,账户头
+DocType: Purchase Taxes and Charges,Account Head,账户头目
 apps/erpnext/erpnext/config/stock.py +163,Update additional costs to calculate landed cost of items,更新额外费用以计算到岸成本
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +111,Electrical,电气
 DocType: Stock Entry,Total Value Difference (Out - In),总价值差（输出 - ）
@@ -3476,3 +3476,8 @@ DocType: Payment Entry,Payment Entry,付款记录
 DocType: Address,County,市/县
 DocType: Address,State,省
 DocType: Address,Email Id,电子邮箱
+DocType: Contact,Replied,有过回应
+DocType: Contact,Open,有效
+DocType: UOM,UOM,计量单位
+DocType: Item,Opening Stock,初始库存
+DocType: Item,Standard Selling Rate,标准销售单价
