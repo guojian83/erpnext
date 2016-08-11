@@ -356,7 +356,7 @@ DocType: Lead,Channel Partner,渠道合作伙伴
 DocType: Account,Old Parent,旧上级
 DocType: Notification Control,Customize the introductory text that goes as a part of that email. Each transaction has a separate introductory text.,自定义作为邮件一部分的简介文本，每个邮件的简介文本是独立的。
 DocType: Stock Reconciliation Item,Do not include symbols (ex. $),不包括符号（例如$）
-DocType: Sales Taxes and Charges Template,Sales Master Manager,销售经理大师
+DocType: Sales Taxes and Charges Template,Sales Master Manager,销售主管
 apps/erpnext/erpnext/config/manufacturing.py +84,Global settings for all manufacturing processes.,所有生产流程的全局设置。
 DocType: Accounts Settings,Accounts Frozen Upto,账户被冻结到...为止
 DocType: SMS Log,Sent On,发送日期
@@ -1277,7 +1277,7 @@ apps/erpnext/erpnext/setup/setup_wizard/setup_wizard.py +196,ERPNext Setup Compl
 DocType: Item,Weightage,权重
 apps/erpnext/erpnext/selling/doctype/customer/customer.py +93,A Customer Group exists with same name please change the Customer name or rename the Customer Group,同名的客户组已经存在，请更改客户姓名或重命名该客户组
 apps/erpnext/erpnext/public/js/templates/contact_list.html +2,New Contact,新建联系人
-DocType: Territory,Parent Territory,家长领地
+DocType: Territory,Parent Territory,上一级区域
 DocType: Quality Inspection Reading,Reading 2,阅读2
 DocType: Stock Entry,Material Receipt,物料收据
 DocType: Homepage,Products,产品展示
@@ -1927,7 +1927,7 @@ apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py +145,Quotation {
 apps/erpnext/erpnext/accounts/report/accounts_payable/accounts_payable.html +1,Total Outstanding Amount,未偿还总额
 apps/erpnext/erpnext/hr/doctype/attendance/attendance.py +29,Employee {0} was on leave on {1}. Cannot mark attendance.,雇员{0}在{1}日休假，不能标记考勤。
 DocType: Sales Partner,Targets,目标
-DocType: Price List,Price List Master,价格表大师
+DocType: Price List,Price List Master,主价格表
 DocType: Sales Person,All Sales Transactions can be tagged against multiple **Sales Persons** so that you can set and monitor targets.,所有的销售交易都可以标记多个**销售人员**，方便你设置和监控目标。
 ,S.O. No.,销售订单号
 apps/erpnext/erpnext/selling/doctype/quotation/quotation.py +150,Please create Customer from Lead {0},请牵头建立客户{0}
@@ -2356,7 +2356,7 @@ DocType: BOM Replace Tool,BOM Replace Tool,BOM替换工具
 apps/erpnext/erpnext/config/setup.py +37,Country wise default Address Templates,国家的默认地址模板
 DocType: Sales Order Item,Supplier delivers to Customer,供应商提供给客户
 apps/erpnext/erpnext/controllers/recurring_document.py +174,Next Date must be greater than Posting Date,下一个日期必须大于过帐日期更大
-apps/erpnext/erpnext/public/js/controllers/transaction.js +850,Show tax break-up,展会税分手
+apps/erpnext/erpnext/public/js/controllers/transaction.js +850,Show tax break-up,展开详细税金
 apps/erpnext/erpnext/accounts/party.py +308,Due / Reference Date cannot be after {0},到期/参照日期不能迟于{0}
 apps/erpnext/erpnext/config/setup.py +51,Data Import and Export,数据导入和导出
 apps/erpnext/erpnext/accounts/report/payment_period_based_on_invoice_date/payment_period_based_on_invoice_date.py +55,Invoice Posting Date,发票发布日期
@@ -3065,7 +3065,7 @@ DocType: Purchase Invoice,Submit on creation,提交关于创建
 DocType: Employee Leave Approver,Employee Leave Approver,雇员假期审批者
 apps/erpnext/erpnext/stock/doctype/item/item.py +490,Row {0}: An Reorder entry already exists for this warehouse {1},行{0}：一个重新排序条目已存在这个仓库{1}
 apps/erpnext/erpnext/crm/doctype/opportunity/opportunity.py +77,"Cannot declare as lost, because Quotation has been made.",不能更改状态为丧失，因为已有报价。
-DocType: Purchase Taxes and Charges Template,Purchase Master Manager,采购经理大师
+DocType: Purchase Taxes and Charges Template,Purchase Master Manager,采购主管
 apps/erpnext/erpnext/stock/doctype/stock_entry/stock_entry.py +429,Production Order {0} must be submitted,生产订单{0}必须提交
 apps/erpnext/erpnext/maintenance/doctype/maintenance_schedule/maintenance_schedule.py +150,Please select Start Date and End Date for Item {0},请选择开始日期和结束日期的项目{0}
 apps/erpnext/erpnext/hr/doctype/leave_control_panel/leave_control_panel.js +16,To date cannot be before from date,无效的主名称
@@ -3481,3 +3481,5 @@ DocType: Contact,Open,有效
 DocType: UOM,UOM,计量单位
 DocType: Item,Opening Stock,初始库存
 DocType: Item,Standard Selling Rate,标准销售单价
+apps/erpnext/erpnext/selling/doctype/customer/customer_dashboard.py +9,Pre Sales,售前
+DocType: Sales Taxes and Charges,Rate,税率
