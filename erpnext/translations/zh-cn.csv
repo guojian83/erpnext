@@ -958,7 +958,7 @@ apps/erpnext/erpnext/stock/doctype/packing_slip/packing_slip.py +65,Case No(s) a
 apps/erpnext/erpnext/stock/report/bom_search/bom_search.js +14,Item 2,项目2
 apps/erpnext/erpnext/stock/doctype/warehouse/warehouse.py +77,Account head {0} created,账户头{0}已创建
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +162,Green,绿
-DocType: Item,Auto re-order,自动重新排序
+DocType: Item,Auto re-order,自动定货
 apps/erpnext/erpnext/selling/report/sales_person_target_variance_item_group_wise/sales_person_target_variance_item_group_wise.py +59,Total Achieved,总体上实现
 DocType: Employee,Place of Issue,签发地点
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +59,Contract,合同
@@ -3489,3 +3489,12 @@ apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +28,Buy,购买
 apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +20,Pricing,价格
 apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +24,Sell,销售
 apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +37,Move,移动
+DocType: Item,Default Material Request Type,默认物料请求类型
+DocType: Item,Barcode,条形码
+DocType: Item,Show in Website,在网站上显示
+DocType: Item Reorder,Re-order Level,触发订货数量
+DocType: Item Reorder,Re-order Qty,自动订货数量
+DocType: Item Reorder,Request for,订货仓库
+DocType: Item Reorder,Check in (group),监视仓库群组
+DocType: Item Price,Rate,单价
+apps/frappe/frappe/public/js/frappe/views/reports/reportview.js +574,Save As,另存为
