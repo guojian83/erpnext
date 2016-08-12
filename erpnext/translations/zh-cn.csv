@@ -1282,7 +1282,7 @@ DocType: Quality Inspection Reading,Reading 2,阅读2
 DocType: Stock Entry,Material Receipt,物料收据
 DocType: Homepage,Products,产品展示
 apps/erpnext/erpnext/accounts/doctype/gl_entry/gl_entry.py +48,Party Type and Party is required for Receivable / Payable account {0},党的类型和党的需要应收/应付帐户{0}
-DocType: Item,"If this item has variants, then it cannot be selected in sales orders etc.",如果此项目已变种，那么它不能在销售订单等选择
+DocType: Item,"If this item has variants, then it cannot be selected in sales orders etc.",如果此品目已变种，那么它不会在销售订单中出现
 DocType: Lead,Next Contact By,下次联络人
 apps/erpnext/erpnext/manufacturing/doctype/bom/bom.py +223,Quantity required for Item {0} in row {1},行{1}中的品目{0}必须指定数量
 apps/erpnext/erpnext/stock/doctype/warehouse/warehouse.py +110,Warehouse {0} can not be deleted as quantity exists for Item {1},仓库{0}无法删除，因为物件{1}有库存量
@@ -1371,7 +1371,7 @@ apps/erpnext/erpnext/accounts/doctype/pricing_rule/pricing_rule.py +37,"Selling 
 DocType: Production Plan Material Request,Material Request Date,材料申请日期
 DocType: Purchase Order Item,Supplier Quotation Item,供应商报价品目
 DocType: Manufacturing Settings,Disables creation of time logs against Production Orders. Operations shall not be tracked against Production Order,禁止对创作生产订单的时间日志。操作不得对生产订单追踪
-DocType: Item,Has Variants,有变体
+DocType: Item,Has Variants,有变种
 DocType: Monthly Distribution,Name of the Monthly Distribution,月度分布名称
 DocType: Sales Person,Parent Sales Person,母公司销售人员
 apps/erpnext/erpnext/setup/utils.py +14,Please specify Default Currency in Company Master and Global Defaults,请在公司主及全球默认指定默认货币
@@ -3340,7 +3340,7 @@ apps/erpnext/erpnext/accounts/page/pos/pos.js +991,Price List not found or disab
 DocType: Expense Claim,Approved,已批准
 DocType: Pricing Rule,Price,价格
 apps/erpnext/erpnext/hr/doctype/salary_slip/salary_slip.py +167,Employee relieved on {0} must be set as 'Left',{0}的假期批准后，雇员的状态必须设置为“离开”
-DocType: Item,"Selecting ""Yes"" will give a unique identity to each entity of this item which can be viewed in the Serial No master.",选择“Yes”将为此品目的所有实体创建唯一标识，你可以在序列号大师中查看他们的序列好。
+DocType: Item,"Selecting ""Yes"" will give a unique identity to each entity of this item which can be viewed in the Serial No master.",打勾将为此品目的每个实体创建唯一标识，你可以在序列号主表中查看。
 apps/erpnext/erpnext/hr/doctype/appraisal/appraisal.py +39,Appraisal {0} created for Employee {1} in the given date range,雇员{1}的限期评估{0}已经创建
 DocType: Employee,Education,教育
 DocType: Selling Settings,Campaign Naming By,活动命名：
