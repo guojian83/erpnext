@@ -71,10 +71,10 @@ function SMSManager(doc) {
 	}
 	this.make_dialog = function() {
 		var d = new frappe.ui.Dialog({
-			title: 'Send SMS',
+			title: __('Send SMS'),
 			width: 400,
 			fields: [
-				{fieldname:'number', fieldtype:'Data', label:'Mobile Number', reqd:1},
+				{fieldname:'number', fieldtype:'Data', label:__('Mobile Number'), reqd:1},
 				{fieldname:'message', fieldtype:'Text', label:'Message', reqd:1},
 				{fieldname:'send', fieldtype:'Button', label:'Send'}
 			]

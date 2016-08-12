@@ -3498,4 +3498,4 @@ DocType: Item Reorder,Request for,订货仓库
 DocType: Item Reorder,Check in (group),监视仓库群组
 DocType: Item Price,Rate,单价
 apps/erpnext/erpnext/public/js/sms_manager.js +74,Send SMS,发送短消息
-apps/erpnext/erpnext/public/js/sms_manager.js +74,number,号码
+apps/erpnext/erpnext/public/js/sms_manager.js +77,Mobile Number,手机号码
