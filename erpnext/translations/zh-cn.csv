@@ -3303,7 +3303,7 @@ DocType: Purchase Invoice,Total Advance,总垫款
 apps/erpnext/erpnext/config/hr.py +253,Processing Payroll,处理工资单
 DocType: Opportunity Item,Basic Rate,基础税率
 DocType: GL Entry,Credit Amount,信贷金额
-apps/erpnext/erpnext/crm/doctype/opportunity/opportunity.js +140,Set as Lost,设置为丧失
+apps/erpnext/erpnext/crm/doctype/opportunity/opportunity.js +140,Set as Lost,设置为丢失
 apps/erpnext/erpnext/accounts/print_format/payment_receipt_voucher/payment_receipt_voucher.html +4,Payment Receipt Note,付款收货注意事项
 DocType: Supplier,Credit Days Based On,信贷天基于
 DocType: Tax Rule,Tax Rule,税务规则
