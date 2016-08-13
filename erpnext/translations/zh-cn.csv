@@ -195,7 +195,7 @@ DocType: Production Order Operation,Updated via 'Time Log',通过“时间日志
 apps/erpnext/erpnext/accounts/doctype/gl_entry/gl_entry.py +83,Account {0} does not belong to Company {1},科目{0}不属于公司{1}
 apps/erpnext/erpnext/controllers/taxes_and_totals.py +413,Advance amount cannot be greater than {0} {1},提前量不能大于{0} {1}
 DocType: Naming Series,Series List for this Transaction,此交易的系列列表
-DocType: Sales Invoice,Is Opening Entry,是否期初分录
+DocType: Sales Invoice,Is Opening Entry,是开户记录
 DocType: Customer Group,Mention if non-standard receivable account applicable,何况，如果不规范应收账款适用
 apps/erpnext/erpnext/manufacturing/doctype/production_order/production_order.py +170,For Warehouse is required before Submit,提交前必须选择仓库
 apps/erpnext/erpnext/accounts/print_format/payment_receipt_voucher/payment_receipt_voucher.html +8,Received On,收到的
@@ -928,7 +928,7 @@ apps/erpnext/erpnext/public/js/controllers/stock_controller.js +40,Accounting Le
 DocType: Stock Reconciliation,Difference Amount,差额
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +169,Retained Earnings,留存收益
 DocType: BOM Item,Item Description,品目说明
-DocType: Purchase Invoice,Is Recurring,是否周期性
+DocType: Purchase Invoice,Is Recurring,是周期性
 DocType: Purchase Invoice,Supplied Items,供应的品目
 DocType: Production Order,Qty To Manufacture,生产数量
 DocType: Buying Settings,Maintain same rate throughout purchase cycle,在整个采购周期使用同一价格
@@ -973,7 +973,7 @@ apps/erpnext/erpnext/stock/doctype/item/item.py +175,Website Image should be a p
 apps/erpnext/erpnext/setup/doctype/item_group/item_group.js +31,This is a root item group and cannot be edited.,请先输入项目
 DocType: Journal Entry Account,Purchase Order,采购订单
 DocType: Warehouse,Warehouse Contact Info,仓库联系方式
-DocType: Purchase Invoice,Recurring Type,经常性类型
+DocType: Purchase Invoice,Recurring Type,周期性类型
 DocType: Address,City/Town,区/镇
 DocType: Address,Is Your Company Address,是你的公司地址
 DocType: Email Digest,Annual Income,年收入
@@ -1012,7 +1012,7 @@ apps/erpnext/erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py +7
 DocType: Purchase Invoice,Taxes and Charges Calculation,税费计算
 DocType: BOM Operation,Workstation,工作站
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +112,Hardware,硬件
-DocType: Sales Order,Recurring Upto,经常性高达
+DocType: Sales Order,Recurring Upto,周期上限
 DocType: Attendance,HR Manager,人力资源经理
 apps/erpnext/erpnext/accounts/party.py +171,Please select a Company,请选择一个公司
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +50,Privilege Leave,特权休假
@@ -1255,7 +1255,7 @@ apps/erpnext/erpnext/maintenance/doctype/maintenance_schedule/maintenance_schedu
 DocType: Salary Structure Deduction,Reduce Deduction for Leave Without Pay (LWP),减少停薪留职扣款（LWP）
 DocType: Territory,Territory Manager,区域经理
 DocType: Packed Item,To Warehouse (Optional),仓库（可选）
-DocType: Payment Entry,Paid Amount (Company Currency),支付的金额（公司货币）
+DocType: Payment Entry,Paid Amount (Company Currency),已付金额（公司货币）
 DocType: Purchase Invoice,Additional Discount,更多优惠
 DocType: Selling Settings,Selling Settings,销售设置
 apps/erpnext/erpnext/setup/setup_wizard/industry_type.py +39,Online Auctions,网上拍卖
@@ -1642,7 +1642,7 @@ DocType: SMS Log,Sent To,发给
 DocType: Payment Request,Make Sales Invoice,创建销售发票
 DocType: Company,For Reference Only.,仅供参考。
 apps/erpnext/erpnext/accounts/report/general_ledger/general_ledger.py +49,Invalid {0}: {1},无效的{0}：{1}
-DocType: Sales Invoice Advance,Advance Amount,预付款总额
+DocType: Sales Invoice Advance,Advance amount,预付款总额
 DocType: Manufacturing Settings,Capacity Planning,容量规划
 apps/erpnext/erpnext/stock/report/batch_wise_balance_history/batch_wise_balance_history.py +43,'From Date' is required,“起始日期”是必需的
 DocType: Journal Entry,Reference Number,参考号码
@@ -1659,7 +1659,7 @@ DocType: Item,End of Life,寿命结束
 apps/erpnext/erpnext/demo/setup_data.py +348,Travel,旅游
 DocType: Leave Block List,Allow Users,允许用户(多个)
 DocType: Purchase Order,Customer Mobile No,客户手机号码
-DocType: Sales Invoice,Recurring,经常性
+DocType: Sales Invoice,Recurring,周期性
 DocType: Cost Center,Track separate Income and Expense for product verticals or divisions.,跟踪独立收入和支出进行产品垂直或部门。
 DocType: Rename Tool,Rename Tool,重命名工具
 apps/erpnext/erpnext/manufacturing/doctype/bom/bom.js +23,Update Cost,更新成本
@@ -1837,7 +1837,7 @@ DocType: Buying Settings,Default Buying Price List,默认采购价格表
 apps/erpnext/erpnext/hr/doctype/process_payroll/process_payroll.py +81,No employee for the above selected criteria OR salary slip already created,已创建的任何雇员对上述选择标准或工资单
 DocType: Notification Control,Sales Order Message,销售订单信息
 apps/erpnext/erpnext/config/setup.py +15,"Set Default Values like Company, Currency, Current Fiscal Year, etc.",设置例如公司，货币，当前财政年度等的默认值
-DocType: Payment Entry,Payment Type,针对选择您要分配款项的发票。
+DocType: Payment Entry,Payment Type,付款类别
 DocType: Process Payroll,Select Employees,选择雇员
 DocType: Bank Reconciliation,To Date,至今
 DocType: Opportunity,Potential Sales Deal,潜在的销售交易
@@ -1920,7 +1920,7 @@ DocType: C-Form Invoice Detail,Territory,区域
 apps/erpnext/erpnext/maintenance/doctype/maintenance_schedule/maintenance_schedule.py +152,Please mention no of visits required,请注明无需访问
 DocType: Stock Settings,Default Valuation Method,默认估值方法
 DocType: Production Order Operation,Planned Start Time,计划开始时间
-DocType: Payment Entry Reference,Allocated,已调配
+DocType: Payment Entry Reference,Allocated,分配额
 apps/erpnext/erpnext/config/accounts.py +225,Close Balance Sheet and book Profit or Loss.,关闭资产负债表，打开损益表。
 DocType: Currency Exchange,Specify Exchange Rate to convert one currency into another,指定货币兑换的汇率
 apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py +145,Quotation {0} is cancelled,报价{0}已被取消
@@ -1983,7 +1983,7 @@ DocType: Quotation,Rate at which customer's currency is converted to company's b
 DocType: Purchase Invoice Item,Net Rate (Company Currency),净利率（公司货币）
 apps/erpnext/erpnext/config/selling.py +105,Manage Territory Tree.,管理区域
 DocType: Journal Entry Account,Sales Invoice,销售发票
-DocType: Journal Entry Account,Party Balance,党平衡
+DocType: Journal Entry Account,Party Balance,对方余额
 apps/erpnext/erpnext/accounts/page/pos/pos.js +475,Please select Apply Discount On,请选择适用的折扣
 apps/erpnext/erpnext/hr/doctype/process_payroll/process_payroll.py +83,Salary Slip Created,工资单创建
 DocType: Company,Default Receivable Account,默认应收账户
@@ -2346,7 +2346,7 @@ DocType: Account,Rate at which this tax is applied,应用此税率的单价
 apps/erpnext/erpnext/stock/report/stock_projected_qty/stock_projected_qty.py +19,Reorder Qty,再订购数量
 apps/erpnext/erpnext/hr/doctype/job_opening/job_opening.py +29,Current Job Openings,当前职位空缺
 DocType: Company,Stock Adjustment Account,库存调整账户
-DocType: Journal Entry,Write Off,抹杀
+DocType: Journal Entry,Write Off,核销
 DocType: Timesheet Detail,Operation ID,操作ID
 DocType: Employee,"System User (login) ID. If set, it will become default for all HR forms.",系统用户的（登录）ID，将作为人力资源表单的默认ID。
 apps/erpnext/erpnext/support/doctype/warranty_claim/warranty_claim.py +16,{0}: From {1},{0}：来自{1}
@@ -2677,7 +2677,7 @@ DocType: Production Order,Total Operating Cost,总营运成本
 apps/erpnext/erpnext/stock/doctype/delivery_note/delivery_note.py +150,Note: Item {0} entered multiple times,注意：品目{0}已多次输入
 apps/erpnext/erpnext/config/selling.py +41,All Contacts.,所有联系人。
 apps/erpnext/erpnext/public/js/setup_wizard.js +45,Company Abbreviation,公司缩写
-DocType: GL Entry,Party Type,党的类型
+DocType: GL Entry,Party Type,对方类别
 apps/erpnext/erpnext/manufacturing/doctype/bom/bom.py +78,Raw material cannot be same as main Item,原料不能和主项相同
 DocType: Item Attribute Value,Abbreviation,缩写
 apps/erpnext/erpnext/setup/doctype/authorization_control/authorization_control.py +36,Not authroized since {0} exceeds limits,不允许，因为{0}超出范围
@@ -2799,7 +2799,7 @@ apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.py +350,Note: 
 ,Delivery Note Trends,发货单趋势
 apps/erpnext/erpnext/setup/doctype/email_digest/email_digest.py +103,This Week's Summary,本周的总结
 apps/erpnext/erpnext/accounts/general_ledger.py +106,Account: {0} can only be updated via Stock Transactions,科目{0}只能通过库存处理更新
-DocType: GL Entry,Party,一方
+DocType: GL Entry,Party,对方
 DocType: Sales Order,Delivery Date,交货日期
 DocType: Opportunity,Opportunity Date,日期机会
 DocType: Purchase Receipt,Return Against Purchase Receipt,回到对外购入库单
@@ -2958,7 +2958,7 @@ DocType: Salary Slip,Net Pay,净支付金额
 DocType: Account,Account,账户
 apps/erpnext/erpnext/stock/doctype/serial_no/serial_no.py +213,Serial No {0} has already been received,序列号{0}已收到过
 ,Requested Items To Be Transferred,要求要传输的项目
-DocType: Purchase Invoice,Recurring Id,经常性ID
+DocType: Purchase Invoice,Recurring Id,周期ID
 DocType: Customer,Sales Team Details,销售团队详情
 DocType: Expense Claim,Total Claimed Amount,总索赔额
 apps/erpnext/erpnext/config/crm.py +17,Potential opportunities for selling.,销售的潜在机会
@@ -3105,7 +3105,7 @@ apps/erpnext/erpnext/hr/doctype/appraisal/appraisal.py +50,Total weightage assig
 DocType: Address,Name of person or organization that this address belongs to.,此地址所属的人或组织的名称
 apps/erpnext/erpnext/public/js/setup_wizard.js +260,Your Suppliers,您的供应商
 apps/erpnext/erpnext/selling/doctype/quotation/quotation.py +49,Cannot set as Lost as Sales Order is made.,不能更改状态为丧失，因为已有销售订单。
-apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +319,Received From,从......收到
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +319,Received From,收到于
 DocType: Lead,Converted,已转换
 DocType: Item,Has Serial No,有序列号
 DocType: Employee,Date of Issue,签发日期
@@ -3151,7 +3151,7 @@ DocType: Authorization Rule,Based On,基于
 DocType: Sales Order Item,Ordered Qty,订购数量
 apps/erpnext/erpnext/stock/doctype/item/item.py +670,Item {0} is disabled,项目{0}无效
 DocType: Stock Settings,Stock Frozen Upto,库存冻结止
-apps/erpnext/erpnext/controllers/recurring_document.py +169,Period From and Period To dates mandatory for recurring {0},期间从和周期要日期强制性的经常性{0}
+apps/erpnext/erpnext/controllers/recurring_document.py +169,Period From and Period To dates mandatory for recurring {0},期间从和周期要日期强制性的周期性{0}
 apps/erpnext/erpnext/config/projects.py +18,Project activity / task.,项目活动/任务。
 apps/erpnext/erpnext/config/hr.py +104,Generate Salary Slips,生成工资条
 apps/erpnext/erpnext/accounts/doctype/pricing_rule/pricing_rule.py +41,"Buying must be checked, if Applicable For is selected as {0}",“适用于”为{0}时必须勾选“采购”
@@ -3317,7 +3317,7 @@ DocType: Sales Invoice,Frequency,频率
 apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.js +463,Debit Account,借方科目
 DocType: Fiscal Year,Year Start Date,今年开始日期
 DocType: Attendance,Employee Name,雇员姓名
-DocType: Sales Invoice,Rounded Total (Company Currency),圆润的总计（公司货币）
+DocType: Sales Invoice,Rounded Total (Company Currency),取整总计（公司货币）
 apps/erpnext/erpnext/accounts/doctype/account/account.py +99,Cannot covert to Group because Account Type is selected.,不能转换到组，因为你选择的是帐户类型。
 DocType: Purchase Common,Purchase Common,购买普通
 apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py +218,{0} {1} has been modified. Please refresh.,{0} {1}已被修改过，请刷新。
@@ -3500,3 +3500,42 @@ DocType: Item Price,Rate,单价
 apps/erpnext/erpnext/public/js/sms_manager.js +74,Send SMS,发送短消息
 apps/erpnext/erpnext/public/js/sms_manager.js +77,Mobile Number,手机号码
 apps/erpnext/erpnext/config/accounts.py +103,Asset Category,资产类别
+DocType: Sales Invoice,Base Change Amount (Company Currency),初始收费金额（公司货币）
+DocType: Sales Invoice,Change Amount,收费金额
+DocType: Timesheet,Timesheet,工时表
+DocType: Payment Entry,Type of Payment,付款类别
+DocType: Payment Entry,Account Paid To,入账户
+DocType: Payment Entry,Account Paid From,出账户
+DocType: Payment Entry Reference,Outstanding,待付款
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +306,Reference No and Reference Date is mandatory for Bank,银行的交易号和交易日期是必须
+DocType: Payment Entry,Total Allocated Amount (Company Currency),总分配额度（公司货币）
+DocType: Payment Entry,Unallocated Amount (Company Currency),未分配额度（公司货币）
+DocType: Payment Entry,Total Allocated Amount,总分配额度
+DocType: Payment Entry,Unallocated Amount,未分配额度
+DocType: Payment Entry,Difference Amount (Company Currency),差额（公司货币）
+DocType: Payment Entry,Writeoff,核销
+DocType: Payment Entry,Payment Deductions or Loss,付款扣除或损失
+DocType: Payment Entry,Deductions or Loss,扣除或损失
+DocType: Payment Entry,Transaction ID,交易号
+DocType: Payment Entry,Cheque/Reference No,支票/转账号
+DocType: Payment Entry,Cheque/Reference Date,支票/转账日期
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +323,Transaction reference no {0} dated {1},交易号 {0} 日期 {1}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +55,Difference Amount must be zero,不同的账号必须为零
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +72,Party Type is mandatory,对方类型必填
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +75,Party is mandatory,对方必填
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +115,"Payment Type must be one of Receive, Pay and Internal Transfer",付款类型必须是接受、支付或者内部转账
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +136,Account Type for {0} must be {1},{0} 的账号类型必须是 {1}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +155,{0} is mandatory,{0} 必填
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +167,Reference Doctype must be one of {0},引用的文档类型必须是{0}中的一个
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +172,{0} {1} does not exist,{0} {1} 不存在
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +178,{0} {1} does not associated with {2} {3},{0} {1} 未关联至 {2} {3}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +187,{0} {1} does not associated with Party Account {2},{0} {1} 未关联至对方账号 {2}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +203,Row #{0}: Journal Entry {1} does not have account {2} or already matched against another voucher,Row #{0}: 流水记录 {1} 没有账号 {2} 或者已被其他收据匹配
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +293,Cannot {0} {1} {2} without any negative outstanding invoice,不可以 {0} {1} {2} 没有任何负的未付款发票
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +298,Paid Amount cannot be greater than total negative outstanding amount {0},已付款金额不可以超过全部负的未付款金额{0}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +319,Amount {0} {1} transferred from {2} to {3},{0} {1} 的金额转账从 {2} 至 {3}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +323,Amount {0} {1} {2} {3},金额 {0} {1} {2} {3}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +326,received from,收到于
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +336,Amount {0} {1} against {2} {3},金额 {0} {1} 是基于 {2} {3}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +341,Amount {0} {1} deducted against {2},金额 {0} {1} 扣除于 {2}
+apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +432,Currency for {0} must be {1},{0} 的金额必须是 {1}
