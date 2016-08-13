@@ -100,6 +100,7 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Asset Category",
+					"description": _("Asset Category")
 				}
 			]
 		},
