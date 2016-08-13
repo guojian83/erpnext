@@ -1959,7 +1959,7 @@ apps/erpnext/erpnext/hr/doctype/attendance/attendance.py +18,Attendance for empl
 DocType: Packing Slip,If more than one package of the same type (for print),如果有多个同样类型的打包（用于打印）
 DocType: C-Form Invoice Detail,Net Total,总净
 DocType: Bin,FCFS Rate,FCFS率
-DocType: Payment Reconciliation Invoice,Outstanding Amount,未偿还的金额
+DocType: Payment Reconciliation Invoice,Outstanding Amount,待付款
 DocType: Project Task,Working,工作
 DocType: Stock Ledger Entry,Stock Queue (FIFO),库存队列(先进先出)
 apps/erpnext/erpnext/accounts/doctype/pos_profile/pos_profile.py +38,{0} does not belong to Company {1},{0}不属于公司{1}
