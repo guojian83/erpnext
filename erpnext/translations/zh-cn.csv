@@ -383,7 +383,7 @@ DocType: Sales Order Item,Used for Production Plan,用于生产计划
 DocType: Manufacturing Settings,Time Between Operations (in mins),时间操作之间（以分钟）
 DocType: Customer,Buyer of Goods and Services.,产品和服务购买者。
 DocType: Journal Entry,Accounts Payable,应付帐款
-apps/erpnext/erpnext/manufacturing/doctype/bom_replace_tool/bom_replace_tool.py +29,The selected BOMs are not for the same item,所选的材料清单并不同样项目
+apps/erpnext/erpnext/manufacturing/doctype/bom_replace_tool/bom_replace_tool.py +29,The selected BOMs are not for the same item,所选的物料清单并不同样项目
 DocType: Pricing Rule,Valid Upto,有效期至
 apps/erpnext/erpnext/public/js/setup_wizard.js +238,List a few of your customers. They could be organizations or individuals.,列出一些你的客户，他们可以是组织或个人。
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +126,Direct Income,直接收益
@@ -1021,7 +1021,7 @@ apps/erpnext/erpnext/shopping_cart/doctype/shopping_cart_settings/shopping_cart_
 DocType: Appraisal Template Goal,Appraisal Template Goal,评估目标模板
 DocType: Salary Slip,Earning,盈余
 DocType: Purchase Invoice,Party Account Currency,党的账户币种
-,BOM Browser,BOM浏览器
+,BOM Browser,物料清单(BOM)浏览器
 DocType: Purchase Taxes and Charges,Add or Deduct,添加或扣除
 apps/erpnext/erpnext/accounts/doctype/shipping_rule/shipping_rule.py +81,Overlapping conditions found between:,之间存在重叠的条件：
 apps/erpnext/erpnext/accounts/doctype/gl_entry/gl_entry.py +171,Against Journal Entry {0} is already adjusted against some other voucher,流水记录{0}已经被其他凭证调整
@@ -1483,7 +1483,7 @@ DocType: POS Profile,Price List,价格表
 apps/erpnext/erpnext/accounts/doctype/fiscal_year/fiscal_year.py +22,{0} is now the default Fiscal Year. Please refresh your browser for the change to take effect.,默认财政年度已经更新为{0}。请刷新您的浏览器以使更改生效。
 apps/erpnext/erpnext/projects/doctype/task/task.js +26,Expense Claims,报销
 DocType: Issue,Support,支持
-,BOM Search,BOM搜索
+,BOM Search,物料清单(BOM)搜索
 apps/erpnext/erpnext/accounts/report/general_ledger/general_ledger.py +180,Closing (Opening + Totals),截止（开标+总计）
 apps/erpnext/erpnext/shopping_cart/doctype/shopping_cart_settings/shopping_cart_settings.py +26,Please specify currency in Company,请公司指定的货币
 DocType: Workstation,Wages per hour,时薪
@@ -1904,7 +1904,7 @@ apps/erpnext/erpnext/controllers/status_updater.py +13,Status must be one of {0}
 DocType: Sales Invoice,Debit To,入借
 DocType: Delivery Note,Required only for sample item.,只对样品项目所需。
 DocType: Stock Ledger Entry,Actual Qty After Transaction,事务后实际数量
-,Pending SO Items For Purchase Request,待处理的SO项目对于采购申请
+,Pending SO Items For Purchase Request,采购请求中待处理的销售订单品目
 DocType: Supplier,Billing Currency,结算货币
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +157,Extra Large,特大号
 ,Profit and Loss Statement,损益表
@@ -2352,7 +2352,7 @@ DocType: Employee,"System User (login) ID. If set, it will become default for al
 apps/erpnext/erpnext/support/doctype/warranty_claim/warranty_claim.py +16,{0}: From {1},{0}：来自{1}
 DocType: Task,depends_on,depends_on
 apps/erpnext/erpnext/accounts/doctype/account/account_tree.js +24,Name of new Account. Note: Please don't create accounts for Customers and Suppliers,新帐户的名称。注：请不要创建帐户的客户和供应商
-DocType: BOM Replace Tool,BOM Replace Tool,BOM替换工具
+DocType: BOM Replace Tool,BOM Replace Tool,物料清单(BOM)替换工具
 apps/erpnext/erpnext/config/setup.py +37,Country wise default Address Templates,国家的默认地址模板
 DocType: Sales Order Item,Supplier delivers to Customer,供应商提供给客户
 apps/erpnext/erpnext/controllers/recurring_document.py +174,Next Date must be greater than Posting Date,下一个日期必须大于过帐日期更大
@@ -3049,7 +3049,7 @@ apps/erpnext/erpnext/accounts/report/bank_reconciliation_statement/bank_reconcil
 apps/erpnext/erpnext/accounts/doctype/account/account.py +50,Account {0}: You can not assign itself as parent account,科目{0}不能是自己的上级科目
 DocType: Purchase Invoice Item,Price List Rate,价格列表费率
 DocType: Item,"Show ""In Stock"" or ""Not in Stock"" based on stock available in this warehouse.",根据此仓库显示“有库存”或“无库存”状态。
-apps/erpnext/erpnext/config/manufacturing.py +38,Bill of Materials (BOM),材料清单(BOM)
+apps/erpnext/erpnext/config/manufacturing.py +38,Bill of Materials (BOM),物料清单(BOM)
 DocType: Item,Average time taken by the supplier to deliver,采取供应商的平均时间交付
 apps/erpnext/erpnext/projects/doctype/project/project_dashboard.html +13,Hours,小时
 DocType: Project,Expected Start Date,预计开始日期
@@ -3088,7 +3088,7 @@ DocType: Purchase Invoice Item,Amount (Company Currency),金额（公司货币�
 apps/erpnext/erpnext/config/hr.py +181,Organization unit (department) master.,组织单位（部门）的主人。
 apps/erpnext/erpnext/setup/doctype/sms_settings/sms_settings.py +25,Please enter valid mobile nos,请输入有效的手机号
 apps/erpnext/erpnext/selling/doctype/sms_center/sms_center.py +75,Please enter message before sending,在发送前，请填写留言
-apps/erpnext/erpnext/config/accounts.py +271,Point-of-Sale Profile,简介销售点的
+apps/erpnext/erpnext/config/accounts.py +271,Point-of-Sale Profile,POS配置
 apps/erpnext/erpnext/setup/doctype/sms_settings/sms_settings.py +68,Please Update SMS Settings,请更新短信设置
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +153,Unsecured Loans,无担保贷款
 DocType: Cost Center,Cost Center Name,成本中心名称
@@ -3382,7 +3382,7 @@ apps/erpnext/erpnext/accounts/party.py +253,Accounting entries have already been
 DocType: Warranty Claim,If different than customer address,如果客户地址不同的话
 DocType: BOM Operation,BOM Operation,BOM操作
 DocType: Purchase Taxes and Charges,On Previous Row Amount,基于前一行的金额
-DocType: POS Profile,POS Profile,POS简介
+DocType: POS Profile,POS Profile,POS配置
 apps/erpnext/erpnext/config/accounts.py +215,"Seasonality for setting budgets, targets etc.",设置季节性的预算，目标等。
 apps/erpnext/erpnext/stock/get_item_details.py +129,"Item {0} is a template, please select one of its variants",项目{0}是一个模板，请选择它的一个变体
 apps/erpnext/erpnext/public/js/setup_wizard.js +202,Purchaser,购买者
@@ -3445,7 +3445,7 @@ DocType: Leave Type,Is Carry Forward,是否顺延假期
 apps/erpnext/erpnext/stock/doctype/material_request/material_request.js +687,Get Items from BOM,从物料清单获取品目
 apps/erpnext/erpnext/stock/report/itemwise_recommended_reorder_level/itemwise_recommended_reorder_level.py +41,Lead Time Days,交货天数
 apps/erpnext/erpnext/manufacturing/doctype/production_planning_tool/production_planning_tool.py +129,Please enter Sales Orders in the above table,请在上表中输入销售订单
-apps/erpnext/erpnext/config/learn.py +222,Bill of Materials,材料清单
+apps/erpnext/erpnext/config/learn.py +222,Bill of Materials,物料清单
 apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.py +76,Row {0}: Party Type and Party is required for Receivable / Payable account {1},行{0}：党的类型和党的需要应收/应付帐户{1}
 apps/erpnext/erpnext/accounts/report/bank_reconciliation_statement/bank_reconciliation_statement.py +102,Ref Date,参考日期
 DocType: Employee,Reason for Leaving,离职原因
@@ -3539,4 +3539,14 @@ apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +326,receiv
 apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +336,Amount {0} {1} against {2} {3},金额 {0} {1} 是基于 {2} {3}
 apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +341,Amount {0} {1} deducted against {2},金额 {0} {1} 扣除于 {2}
 apps/erpnext/erpnext/accounts/doctype/payment_entry/payment_entry.py +432,Currency for {0} must be {1},{0} 的金额必须是 {1}
- DocType: Stock Entry,Material Receipt,物料收据
+DocType: Stock Entry,Material Receipt,物料收据
+DocType: Asset Movement,Asset Movement,资产调度
+DocType: Cheque Print Template,Cheque Print Template,支票打印模板
+,Asset Depreciation Ledger,资产折旧总账
+,Asset Depreciations and Balances,折旧和余额
+apps/erpnext/erpnext/config/hr.py +115,Salary Components,工资模块
+,Employees working on a holiday,员工节假日工作
+,Daily Timesheet Summary,日常工时表总结
+,Minutes to First Response for Issues,出问题的第一时间回复分钟数
+,Territory Target Variance (Item Group-Wise),按品目组划分的区域目标差异
+,Sales Person Target Variance (Item Group-Wise),按品目组划分的销售人员目标差异
