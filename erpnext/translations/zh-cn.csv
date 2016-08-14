@@ -3456,7 +3456,7 @@ apps/erpnext/erpnext/accounts/doctype/account/account.py +218,Account {0} does n
 DocType: Account,Cash,现金
 DocType: Employee,Short biography for website and other publications.,在网站或其他出版物使用的个人简介。
 DocType: Customer,Active,已激活
-DocType: Quotation Item,Amount,小计
+DocType: Quotation Item,Amount,金额
 DocType: Sales Taxes and Charges,Total,总计
 apps/erpnext/erpnext/selling/doctype/customer/customer_dashboard.py +5,This is based on transactions against this Customer. See timeline below for details,这是基于该客户交易信息的。需要详细信息请查看下面的时间轴。
 apps/erpnext/erpnext/stock/doctype/item/item_dashboard.py +5,This is based on stock movement. See {0} for details,这是基于仓库调度的。需要详细信息请查看{0}。
@@ -3550,3 +3550,5 @@ apps/erpnext/erpnext/config/hr.py +115,Salary Components,工资模块
 ,Minutes to First Response for Issues,出问题的第一时间回复分钟数
 ,Territory Target Variance (Item Group-Wise),按品目组划分的区域目标差异
 ,Sales Person Target Variance (Item Group-Wise),按品目组划分的销售人员目标差异
+apps/erpnext/erpnext/setup/doctype/sales_person/sales_person_tree.js +4,New Sales Person Name,新建销售人员名称
+apps/erpnext/erpnext/setup/doctype/sales_person/sales_person_tree.js +7,Please enter Employee Id of this sales person,请输入该销售人员的员工号
