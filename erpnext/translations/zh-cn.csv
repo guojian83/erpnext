@@ -737,7 +737,7 @@ DocType: Stock Ledger Entry,Voucher Detail No,凭证详情编号
 DocType: Stock Entry,Total Outgoing Value,即将离任的总价值
 apps/erpnext/erpnext/public/js/account_tree_grid.js +225,Opening Date and Closing Date should be within same Fiscal Year,开幕日期和截止日期应在同一会计年度
 DocType: Lead,Request for Information,索取资料
-DocType: Payment Request,Paid,付费
+DocType: Payment Request,Paid,已付费
 DocType: Salary Slip,Total in words,总字
 DocType: Material Request Item,Lead Time Date,交货时间日期
 apps/erpnext/erpnext/accounts/page/pos/pos.js +86, is mandatory. Maybe Currency Exchange record is not created for ,是强制性的。也许外币兑换记录没有创建
@@ -3552,3 +3552,4 @@ apps/erpnext/erpnext/config/hr.py +115,Salary Components,工资模块
 ,Sales Person Target Variance (Item Group-Wise),按品目组划分的销售人员目标差异
 apps/erpnext/erpnext/setup/doctype/sales_person/sales_person_tree.js +4,New Sales Person Name,新建销售人员名称
 apps/erpnext/erpnext/setup/doctype/sales_person/sales_person_tree.js +7,Please enter Employee Id of this sales person,请输入该销售人员的员工号
+DocType: Sales Invoice,Time Sheet List,工作时间记录表
