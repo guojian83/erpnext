@@ -3553,3 +3553,8 @@ apps/erpnext/erpnext/config/hr.py +115,Salary Components,工资模块
 apps/erpnext/erpnext/setup/doctype/sales_person/sales_person_tree.js +4,New Sales Person Name,新建销售人员名称
 apps/erpnext/erpnext/setup/doctype/sales_person/sales_person_tree.js +7,Please enter Employee Id of this sales person,请输入该销售人员的员工号
 DocType: Sales Invoice,Time Sheet List,工作时间记录表
+,BOM,物料清单
+,CRM,客户关系
+,Profit and Loss Statment,损益表
+DocType: Quotation Item,Measure,尺寸
+DocType: Quotation Item,Specification,规格
