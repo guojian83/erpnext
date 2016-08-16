@@ -490,7 +490,7 @@ DocType: SMS Settings,Receiver Parameter,接收人参数
 apps/erpnext/erpnext/controllers/trends.py +39,'Based On' and 'Group By' can not be same,“根据”和“分组依据”不能相同
 DocType: Sales Person,Sales Person Targets,销售人员目标
 apps/erpnext/erpnext/templates/includes/footer/footer_extension.html +34,Please enter email address,请输入您的电子邮件地址
-DocType: Production Order Operation,In minutes,已分钟为单位
+DocType: Production Order Operation,In minutes,以分钟为单位
 DocType: Issue,Resolution Date,决议日期
 apps/erpnext/erpnext/accounts/doctype/sales_invoice/sales_invoice.py +693,Please set default Cash or Bank account in Mode of Payment {0},请设置默认的现金或银行账户的付款方式{0}
 DocType: Selling Settings,Customer Naming By,客户命名方式
@@ -2108,7 +2108,7 @@ DocType: Account,Depreciation,折旧
 apps/erpnext/erpnext/stock/report/supplier_wise_sales_analytics/supplier_wise_sales_analytics.py +49,Supplier(s),供应商
 DocType: Employee Attendance Tool,Employee Attendance Tool,员工考勤工具
 DocType: Supplier,Credit Limit,信用额度
-DocType: Production Plan Sales Order,Salse Order Date,Salse订单日期
+DocType: Production Plan Sales Order,Salse Order Date,销售订单日期
 DocType: GL Entry,Voucher No,凭证编号
 DocType: Leave Allocation,Leave Allocation,假期调配
 apps/erpnext/erpnext/manufacturing/doctype/production_planning_tool/production_planning_tool.py +481,Material Requests {0} created,物料申请{0}已创建
@@ -2509,7 +2509,7 @@ DocType: Shipping Rule,Shipping Rule Conditions,配送规则条件
 DocType: BOM Replace Tool,The new BOM after replacement,更换后的物料清单
 apps/erpnext/erpnext/accounts/page/pos/pos.js +631,Point of Sale,销售点
 DocType: Account,Tax,税项
-DocType: Production Planning Tool,Production Planning Tool,生产规划工具
+DocType: Production Planning Tool,Production Planning Tool,生产计划工具
 DocType: Quality Inspection,Report Date,报告日期
 DocType: C-Form,Invoices,发票
 DocType: Job Opening,Job Title,职位
@@ -2746,7 +2746,7 @@ DocType: Stock Ledger Entry,Stock Value Difference,库存值差异
 apps/erpnext/erpnext/config/learn.py +239,Human Resource,人力资源
 DocType: Payment Reconciliation Payment,Payment Reconciliation Payment,付款方式付款对账
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +36,Tax Assets,所得税资产
-DocType: BOM Item,BOM No,BOM编号
+DocType: BOM Item,BOM No,物料清单(BOM)编号
 apps/erpnext/erpnext/accounts/doctype/journal_entry/journal_entry.py +133,Journal Entry {0} does not have account {1} or already matched against other voucher,流水记录{0}没有科目{1}或已经匹配其他凭证
 DocType: Item,Moving Average,均匀调度
 DocType: BOM Replace Tool,The BOM which will be replaced,此物料清单将被替换
@@ -3359,7 +3359,7 @@ DocType: Serial No,Purchase / Manufacture Details,采购/制造详细信息
 apps/erpnext/erpnext/config/stock.py +309,Batch Inventory,批量库存
 DocType: Employee,Contract End Date,合同结束日期
 DocType: Sales Order,Track this Sales Order against any Project,跟踪对任何项目这个销售订单
-DocType: Production Planning Tool,Pull sales orders (pending to deliver) based on the above criteria,基于上述标准拉销售订单（待定提供）
+DocType: Production Planning Tool,Pull sales orders (pending to deliver) based on the above criteria,基于上述标准提取销售订单（待发货）
 DocType: Deduction Type,Deduction Type,扣款类型
 DocType: Attendance,Half Day,半天
 DocType: Pricing Rule,Min Qty,最小数量
@@ -3556,5 +3556,8 @@ DocType: Sales Invoice,Time Sheet List,工作时间记录表
 ,BOM,物料清单
 ,CRM,客户关系
 ,Profit and Loss Statment,损益表
-DocType: Quotation Item,Measure,尺寸
-DocType: Quotation Item,Specification,规格
+,Customer Addresses and Contacts,客户地址及联系人
+DocType: Opportunity,Mins to First Response,首次回应分钟数
+DocType: Sales Invoice Item,Discount and Margin,折扣和利润
+DocType: Production Planning Tool,Get Items From,提取信息
+DocType: Production Planning Tool,"Create for full quantity, ignoring quantity already on order",全部重新创建，忽略已计划的
