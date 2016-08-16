@@ -3561,3 +3561,5 @@ DocType: Opportunity,Mins to First Response,首次回应分钟数
 DocType: Sales Invoice Item,Discount and Margin,折扣和利润
 DocType: Production Planning Tool,Get Items From,提取信息
 DocType: Production Planning Tool,"Create for full quantity, ignoring quantity already on order",全部重新创建，忽略已计划的
+DocType: Quotation Item,Measure,尺寸
+DocType: Quotation Item,Specification,规格
