@@ -2,7 +2,7 @@ DocType: Employee,Salary Mode,薪酬模式
 DocType: Employee,Divorced,离婚
 apps/erpnext/erpnext/selling/doctype/sales_order/sales_order.py +84,Warning: Same item has been entered multiple times.,警告：相同项目已经输入多次。
 apps/erpnext/erpnext/hub_node/doctype/hub_settings/hub_settings.py +96,Items already synced,品目已同步
-DocType: Buying Settings,Allow Item to be added multiple times in a transaction,允许项目将在一个事务中多次添加
+DocType: Buying Settings,Allow Item to be added multiple times in a transaction,允许项目将在一个交易中多次添加
 apps/erpnext/erpnext/support/doctype/warranty_claim/warranty_claim.py +33,Cancel Material Visit {0} before cancelling this Warranty Claim,取消此保修要求之前请先取消物料访问{0}
 apps/erpnext/erpnext/setup/setup_wizard/industry_type.py +19,Consumer Products,消费类产品
 apps/erpnext/erpnext/accounts/report/general_ledger/general_ledger.js +68,Please select Party Type first,请选择党第一型
@@ -76,7 +76,7 @@ apps/erpnext/erpnext/manufacturing/doctype/bom/bom.py +127,Please select Price L
 DocType: Production Order Operation,Work In Progress,在制品
 DocType: Employee,Holiday List,假期列表
 apps/erpnext/erpnext/public/js/setup_wizard.js +205,Accountant,会计
-DocType: Cost Center,Stock User,股票用户
+DocType: Cost Center,Stock User,仓库用户
 DocType: Company,Phone No,电话号码
 apps/erpnext/erpnext/controllers/recurring_document.py +132,New {0}: #{1},新{0}：#{1}
 ,Sales Partners Commission,销售合作伙伴佣金
@@ -413,7 +413,7 @@ DocType: BOM,Operating Cost,营业成本
 DocType: Sales Order Item,Gross Profit,毛利
 apps/erpnext/erpnext/stock/doctype/item_attribute/item_attribute.py +42,Increment cannot be 0,增量不能为0
 DocType: Production Planning Tool,Material Requirement,物料需求
-DocType: Company,Delete Company Transactions,删除公司事务
+DocType: Company,Delete Company Transactions,删除公司交易
 DocType: Purchase Receipt,Add / Edit Taxes and Charges,添加/编辑税金及费用
 DocType: Purchase Invoice,Supplier Invoice No,供应商发票编号
 DocType: Territory,For reference,供参考
@@ -1005,7 +1005,7 @@ apps/erpnext/erpnext/setup/doctype/email_digest/email_digest.js +17,Email Digest
 apps/erpnext/erpnext/manufacturing/doctype/bom/bom.py +445,BOM {0} does not belong to Item {1},BOM{0}不属于品目{1}
 DocType: Sales Partner,Target Distribution,目标分布
 DocType: Salary Slip,Bank Account No.,银行账号
-DocType: Naming Series,This is the number of the last created transaction with this prefix,这就是以这个前缀的最后一个创建的事务数
+DocType: Naming Series,This is the number of the last created transaction with this prefix,这就是以这个前缀的最后一个创建的交易数
 DocType: Quality Inspection Reading,Reading 8,阅读8
 DocType: Sales Partner,Agent,代理人
 apps/erpnext/erpnext/stock/doctype/landed_cost_voucher/landed_cost_voucher.py +75,"Total {0} for all items is zero, may you should change 'Distribute Charges Based On'",共有{0}所有项目为零，可能你应该改变“基于分布式费”
@@ -1101,7 +1101,7 @@ DocType: Quality Inspection,Readings,阅读
 DocType: Stock Entry,Total Additional Costs,总额外费用
 apps/erpnext/erpnext/public/js/setup_wizard.js +295,Sub Assemblies,半成品
 DocType: Shipping Rule Condition,To Value,结束值
-DocType: Asset Movement,Stock Manager,库存管理
+DocType: Asset Movement,Stock Manager,仓库经理
 apps/erpnext/erpnext/stock/doctype/stock_entry/stock_entry.py +141,Source warehouse is mandatory for row {0},行{0}中源仓库为必须项
 apps/erpnext/erpnext/stock/doctype/delivery_note/delivery_note.js +673,Packing Slip,装箱单
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +108,Office Rent,办公室租金
@@ -1897,13 +1897,13 @@ apps/erpnext/erpnext/accounts/doctype/account/account.py +224,"Merging is only p
 apps/erpnext/erpnext/config/selling.py +36,Manage Customer Group Tree.,管理客户群组
 apps/erpnext/erpnext/accounts/doctype/cost_center/cost_center_tree.js +22,New Cost Center Name,新建成本中心名称
 DocType: Leave Control Panel,Leave Control Panel,假期控制面板
-DocType: Appraisal,HR User,HR用户
+DocType: Appraisal,HR User,人力资源用户
 DocType: Purchase Invoice,Taxes and Charges Deducted,已扣除税费
 apps/erpnext/erpnext/hooks.py +100,Issues,问题
 apps/erpnext/erpnext/controllers/status_updater.py +13,Status must be one of {0},状态必须是{0}中的一个
 DocType: Sales Invoice,Debit To,入借
 DocType: Delivery Note,Required only for sample item.,只对样品项目所需。
-DocType: Stock Ledger Entry,Actual Qty After Transaction,事务后实际数量
+DocType: Stock Ledger Entry,Actual Qty After Transaction,交易后实际数量
 ,Pending SO Items For Purchase Request,采购请求中待处理的销售订单品目
 DocType: Supplier,Billing Currency,结算货币
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +157,Extra Large,特大号
@@ -2418,7 +2418,7 @@ DocType: Purchase Invoice Item,Rate,单价
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +62,Intern,实习生
 DocType: Stock Entry,From BOM,从BOM
 apps/erpnext/erpnext/setup/setup_wizard/install_fixtures.py +34,Basic,基本
-apps/erpnext/erpnext/stock/doctype/stock_ledger_entry/stock_ledger_entry.py +97,Stock transactions before {0} are frozen,早于{0}的库存事务已冻结
+apps/erpnext/erpnext/stock/doctype/stock_ledger_entry/stock_ledger_entry.py +97,Stock transactions before {0} are frozen,早于{0}的库存交易已冻结
 apps/erpnext/erpnext/maintenance/doctype/maintenance_schedule/maintenance_schedule.py +217,Please click on 'Generate Schedule',请点击“生成表”
 apps/erpnext/erpnext/hr/doctype/leave_application/leave_application.js +63,To Date should be same as From Date for Half Day leave,日期应该是一样的起始日期为半天假
 apps/erpnext/erpnext/config/stock.py +185,"e.g. Kg, Unit, Nos, m",如公斤，单元，号数，米
