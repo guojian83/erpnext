@@ -2454,7 +2454,7 @@ DocType: Delivery Note Item,From Warehouse,从仓库
 DocType: Purchase Taxes and Charges,Valuation and Total,估值与总计
 DocType: Tax Rule,Shipping City,航运市
 apps/erpnext/erpnext/stock/doctype/item/item.js +62,This Item is a Variant of {0} (Template). Attributes will be copied over from the template unless 'No Copy' is set,该项目是{0}（模板）的变体。属性将被复制的模板，除非“不复制”设置
-DocType: Account,Purchase User,购买用户
+DocType: Account,Purchase User,采购用户
 DocType: Notification Control,Customize the Notification,自定义通知
 apps/erpnext/erpnext/accounts/report/cash_flow/cash_flow.py +17,Cash Flow from Operations,运营现金流
 apps/erpnext/erpnext/utilities/doctype/address_template/address_template.py +27,Default Address Template cannot be deleted,默认地址模板不能删除
