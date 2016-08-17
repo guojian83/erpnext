@@ -1452,7 +1452,7 @@ DocType: Employee,Personal Details,个人资料
 ,Quotation Trends,报价趋势
 apps/erpnext/erpnext/accounts/doctype/pricing_rule/pricing_rule.py +138,Item Group not mentioned in item master for item {0},品目{0}的品目群组没有设置
 apps/erpnext/erpnext/accounts/doctype/sales_invoice/sales_invoice.py +296,Debit To account must be a Receivable account,入借帐户必须是应收账科目
-DocType: Shipping Rule Condition,Shipping Amount,发货数量
+DocType: Shipping Rule Condition,Shipping Amount,发货价格
 ,Pending Amount,待审核金额
 DocType: Purchase Invoice Item,Conversion Factor,转换系数
 DocType: Purchase Order,Delivered,已交付
