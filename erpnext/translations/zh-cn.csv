@@ -943,7 +943,7 @@ DocType: GL Entry,Against Voucher,对凭证
 DocType: Item,Default Buying Cost Center,默认采购成本中心
 apps/erpnext/erpnext/setup/page/welcome_to_erpnext/welcome_to_erpnext.html +6,"To get the best out of ERPNext, we recommend that you take some time and watch these help videos.",为了获得最好ERPNext，我们建议您花一些时间和观看这些帮助视频。
 apps/erpnext/erpnext/accounts/page/pos/pos.js +87, to ,至
-DocType: Item,Lead Time in days,在天交货期
+DocType: Item,Lead Time in days,订货至交货的天数
 ,Accounts Payable Summary,应付帐款摘要
 apps/erpnext/erpnext/accounts/doctype/gl_entry/gl_entry.py +196,Not authorized to edit frozen Account {0},无权修改冻结帐户{0}
 DocType: Journal Entry,Get Outstanding Invoices,获取未清发票
@@ -3563,3 +3563,6 @@ DocType: Production Planning Tool,Get Items From,提取信息
 DocType: Production Planning Tool,"Create for full quantity, ignoring quantity already on order",全部重新创建，忽略已计划的
 DocType: Quotation Item,Measure,尺寸
 DocType: Quotation Item,Specification,规格
+DocType: Item,Is Purchase Item,是采购品目
+DocType: Item,Safety Stock,安全库存量
+DocType: Item,Is Sales Item,是销售品目
