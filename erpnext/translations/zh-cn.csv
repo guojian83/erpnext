@@ -2189,7 +2189,7 @@ DocType: Maintenance Schedule Item,Maintenance Schedule Item,维护计划品目
 DocType: Sales Order,%  Delivered,％已交付
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +154,Bank Overdraft Account,银行透支账户
 apps/erpnext/erpnext/projects/doctype/timesheet/timesheet.js +47,Make Salary Slip,创建工资单
-apps/erpnext/erpnext/manufacturing/doctype/bom/bom.js +26,Browse BOM,浏览BOM
+apps/erpnext/erpnext/manufacturing/doctype/bom/bom.js +26,Browse BOM,浏览物料清单(BOM)
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +152,Secured Loans,抵押贷款
 apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/standard_chart_of_accounts.py +166,Opening Balance Equity,期初余额权益
 DocType: Appraisal,Appraisal,评估
